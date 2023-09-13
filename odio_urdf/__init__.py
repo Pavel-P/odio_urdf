@@ -334,7 +334,7 @@ class Inertia(Element):
                 kwargs["iyy"]=str(args[0][3])
                 kwargs["iyz"]=str(args[0][4])
                 kwargs["izz"]=str(args[0][5])
-                del args[0]
+                del list(args)[0]
         super(Inertia, self).__init__(*args,**kwargs)
 
 class Visual(Element):
@@ -392,7 +392,7 @@ class Origin(Element):
             if len(args[0]) == 6:
                 kwargs["xyz"]=str(args[0][0])+' '+str(args[0][1])+' '+str(args[0][2])
                 kwargs["rpy"]=str(args[0][3])+' '+str(args[0][4])+' '+str(args[0][5])
-                del args[0]
+                del list(args)[0]
 
         super(Origin, self).__init__(*args,**kwargs)
 
